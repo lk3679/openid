@@ -30,10 +30,7 @@ namespace openid
 
         public static string QueryByPhone(string mobilephone)
         {
-           
-            if (string.IsNullOrEmpty(mobilephone))
-                return "";
-            
+                            
             string sql = @"SELECT VerificationDataId, 
                                               [MobilePhone],
 		                                        [VerifyCode]

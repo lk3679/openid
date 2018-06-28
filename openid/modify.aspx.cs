@@ -12,6 +12,11 @@ namespace openid
         public string ExcudeResult = "";
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["userID"] == null)
+            {
+                Response.Write("<script>alert('請先登入帳號密碼');window.location.href='login.aspx'</script>");
+            }
+
             string act = "";
             string id = "";
             string strSQL = "";

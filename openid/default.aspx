@@ -6,7 +6,8 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>OpenID修正頁面</title>
-    <link rel='shortcut icon' href="./favicon.ico"/>
+    <link rel='shortcut icon' href="./favicon.ico"/>
+
 <link rel="stylesheet" href="~/script/bootstrap.css">
     <script src="script/jquery-1.10.2.min.js"></script>
     <style>
@@ -63,8 +64,11 @@
     <br />
 
     <form id="form1" runat="server">
+        
           <div class="container">
-             
+              <span style="color:#0026ff">
+             <%=AdminName %>你好，歡迎登入管理系統</span>
+        <asp:Button ID="LogOut" runat="server" Text="登出系統" CssClass="btn btn-default" OnClick="LogOut_Click"  /><br />
             <h5>請輸入手機號碼</h5>     
             <asp:TextBox ID="mobile" runat="server"></asp:TextBox>
              <h5>請輸入卡號</h5>  

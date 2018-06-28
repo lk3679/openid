@@ -5,7 +5,8 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>登入頁面</title>
-      <link rel='shortcut icon' href="./favicon.ico"/>
+      <link rel='shortcut icon' href="./favicon.ico"/>
+
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="stylesheet" href="./script/bootstrap.css">
@@ -54,10 +55,11 @@
        
       <div class="row">
         <div class="login-form">
-          <h4>請輸入帳號密碼</h4>
-            <br/>
+            <img src="img/eslite.png" />
+        
+           
           <form action="" method="post" >
-               <%=LoginResult %>
+              <span style="color:#ff0000"><%=LoginResult %></span> 
             <fieldset>
               <div class="clearfix">
                 <input type="text" placeholder="Username" name="Username">

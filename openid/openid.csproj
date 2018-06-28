@@ -72,6 +72,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="favicon.ico" />
+    <Content Include="img\eslite.png" />
     <Content Include="login.aspx" />
     <Content Include="modify.aspx" />
     <Content Include="script\packages.config" />
@@ -103,7 +104,6 @@
     <Content Include="script\modernizr-2.6.2.js" />
     <Content Include="script\respond.js" />
     <Content Include="script\respond.min.js" />
-    <Content Include="Timestamp.aspx" />
     <None Include="Web References\CRMwebReference\BFCRMWebService.disco" />
     <Content Include="Web.config" />
     <Content Include="default.aspx" />
@@ -151,13 +151,6 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
-    </Compile>
-    <Compile Include="Timestamp.aspx.cs">
-      <DependentUpon>Timestamp.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Timestamp.aspx.designer.cs">
-      <DependentUpon>Timestamp.aspx</DependentUpon>
     </Compile>
     <Compile Include="default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>

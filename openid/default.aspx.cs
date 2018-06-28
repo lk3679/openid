@@ -24,7 +24,11 @@ namespace openid
         {
             if (Session["userID"] == null)
             {
-                Response.Write("<script>alert('請先登入帳號密碼');window.location.href='login.aspx'</script>");              
+                Response.Write("<script>alert('請先登入帳號密碼');window.location.href='login.aspx'</script>");
+            }
+            else
+            {
+                AdminName = Session["userID"].ToString();
             }
 
         }
@@ -66,6 +70,12 @@ namespace openid
 
             }
 
+            if (string.IsNullOrEmpty(mobilephone))
+            {
+                ResultLabel.Text = "輸入資料有誤";
+                return;
+            }
+
             string sql = Verification.QueryByPhone(mobilephone);
             dt = Utility.getDataTable(sql);
 
@@ -74,9 +84,15 @@ namespace openid
             else
                 ResultLabel.Text = string.Format("共有{0}筆資料", dt.Rows.Count.ToString());
         }
+
+        protected void LogOut_Click(object sender, EventArgs e)
+        {
+            Session.RemoveAll();
+            Response.Write("<script>alert('你已登出系統');window.location.href='login.aspx'</script>");
+        }
     }
 
-    
+
 
     class CustData
     {
