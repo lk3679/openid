@@ -1,0 +1,1822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetCardDataJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPapersID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardDataJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardDataJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardPointJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardPointJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardPointJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardPointExpireJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCardNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardPointExpireJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardPointExpireJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdCardPointUseJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPoint" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strUseItem" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strProfitCenter" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdCardPointUseJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdCardPointUseJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardPointUseListJOSN">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEndDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardPointUseListJOSNResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardPointUseListJOSNResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardBuyListJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strStartDate" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEndDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCardBuyListJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCardBuyListJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustDataJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strCardNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPapersID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMobilePhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCustDataJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCustDataJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdCustDataJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMobilePhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAddress_ZipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHobby" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInterest" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="IsVerify" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdCustDataJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdCustDataJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsApplyCardJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strGUID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PapersType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PapersID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBirthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TelPhone_Tel" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMobilePhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAddress_ZipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strHobby" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInterest" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CardKind" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="Apply_Store" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsApplyCardJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsApplyCardJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdGetMsgEpaperJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIsMsg" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strIsEpaper" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdGetMsgEpaperJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdGetMsgEpaperJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEcouponListJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetEcouponListJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetEcouponListJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsEcouponDataJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCardNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EcouponID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strActionID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="DiscountMoney" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CanUseEndDate" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InsEcouponDataJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InsEcouponDataJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMemberJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCardKind" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPapersType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPapersID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBirthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strSex" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strMobilePhone" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strAdd" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreateMemberJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreateMemberJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegistVerifyJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCardNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strPapersID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRegistVerifyJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRegistVerifyJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountIsLockJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetAccountIsLockJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetAccountIsLockJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdAccountLockFieldJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strCustNo" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpdAccountLockFieldJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="UpdAccountLockFieldJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoginVerifyJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAccount" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoginVerifyJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoginVerifyJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetForgetVerifyJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strPapersID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strBirthday" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetForgetVerifyJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetForgetVerifyJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOldRegistVerifyJSON">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strAllPapersID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetOldRegistVerifyJSONResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetOldRegistVerifyJSONResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrmUpdAccountLockField">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vipId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strFlag" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strValue" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrmUpdAccountLockFieldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrmUpdateEmailField">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="vipId" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="strInitEmail" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strNewEmail" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CrmUpdateEmailFieldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetCardDataJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardDataJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCardDataJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardDataJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardPointJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardPointJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointExpireJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardPointExpireJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointExpireJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardPointExpireJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdCardPointUseJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdCardPointUseJSON" />
+  </wsdl:message>
+  <wsdl:message name="UpdCardPointUseJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdCardPointUseJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointUseListJOSNSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardPointUseListJOSN" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointUseListJOSNSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardPointUseListJOSNResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardBuyListJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCardBuyListJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCardBuyListJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCardBuyListJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDataJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCustDataJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDataJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCustDataJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdCustDataJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdCustDataJSON" />
+  </wsdl:message>
+  <wsdl:message name="UpdCustDataJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdCustDataJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsApplyCardJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsApplyCardJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsApplyCardJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsApplyCardJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdGetMsgEpaperJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdGetMsgEpaperJSON" />
+  </wsdl:message>
+  <wsdl:message name="UpdGetMsgEpaperJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdGetMsgEpaperJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetEcouponListJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetEcouponListJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetEcouponListJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetEcouponListJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="InsEcouponDataJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:InsEcouponDataJSON" />
+  </wsdl:message>
+  <wsdl:message name="InsEcouponDataJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:InsEcouponDataJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreateMemberJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:CreateMemberJSON" />
+  </wsdl:message>
+  <wsdl:message name="CreateMemberJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:CreateMemberJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistVerifyJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRegistVerifyJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistVerifyJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRegistVerifyJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountIsLockJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetAccountIsLockJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountIsLockJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetAccountIsLockJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpdAccountLockFieldJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:UpdAccountLockFieldJSON" />
+  </wsdl:message>
+  <wsdl:message name="UpdAccountLockFieldJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:UpdAccountLockFieldJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginVerifyJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoginVerifyJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginVerifyJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoginVerifyJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetForgetVerifyJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetForgetVerifyJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetForgetVerifyJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetForgetVerifyJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetOldRegistVerifyJSONSoapIn">
+    <wsdl:part name="parameters" element="tns:GetOldRegistVerifyJSON" />
+  </wsdl:message>
+  <wsdl:message name="GetOldRegistVerifyJSONSoapOut">
+    <wsdl:part name="parameters" element="tns:GetOldRegistVerifyJSONResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrmUpdAccountLockFieldSoapIn">
+    <wsdl:part name="parameters" element="tns:CrmUpdAccountLockField" />
+  </wsdl:message>
+  <wsdl:message name="CrmUpdAccountLockFieldSoapOut">
+    <wsdl:part name="parameters" element="tns:CrmUpdAccountLockFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="CrmUpdateEmailFieldSoapIn">
+    <wsdl:part name="parameters" element="tns:CrmUpdateEmailField" />
+  </wsdl:message>
+  <wsdl:message name="CrmUpdateEmailFieldSoapOut">
+    <wsdl:part name="parameters" element="tns:CrmUpdateEmailFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCardDataJSONHttpGetIn">
+    <wsdl:part name="strPapersID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardDataJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointExpireJSONHttpGetIn">
+    <wsdl:part name="strCardNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointExpireJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCardPointUseJSONHttpGetIn">
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strPoint" type="s:string" />
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strUseItem" type="s:string" />
+    <wsdl:part name="strProfitCenter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCardPointUseJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointUseListJOSNHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strStartDate" type="s:string" />
+    <wsdl:part name="strEndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointUseListJOSNHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardBuyListJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strStartDate" type="s:string" />
+    <wsdl:part name="strEndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardBuyListJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDataJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strCardNo" type="s:string" />
+    <wsdl:part name="strName" type="s:string" />
+    <wsdl:part name="strPapersID" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDataJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCustDataJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strAddress_ZipCode" type="s:string" />
+    <wsdl:part name="strAddress" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strHobby" type="s:string" />
+    <wsdl:part name="strInterest" type="s:string" />
+    <wsdl:part name="IsVerify" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCustDataJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsApplyCardJSONHttpGetIn">
+    <wsdl:part name="strGUID" type="s:string" />
+    <wsdl:part name="strName" type="s:string" />
+    <wsdl:part name="PapersType" type="s:string" />
+    <wsdl:part name="PapersID" type="s:string" />
+    <wsdl:part name="strSex" type="s:string" />
+    <wsdl:part name="strBirthday" type="s:string" />
+    <wsdl:part name="TelPhone_Tel" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strAddress_ZipCode" type="s:string" />
+    <wsdl:part name="strAddress" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strHobby" type="s:string" />
+    <wsdl:part name="strInterest" type="s:string" />
+    <wsdl:part name="CardType" type="s:string" />
+    <wsdl:part name="CardKind" type="s:string" />
+    <wsdl:part name="Apply_Store" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsApplyCardJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdGetMsgEpaperJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strIsMsg" type="s:string" />
+    <wsdl:part name="strIsEpaper" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdGetMsgEpaperJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEcouponListJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEcouponListJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsEcouponDataJSONHttpGetIn">
+    <wsdl:part name="strCardNo" type="s:string" />
+    <wsdl:part name="EcouponID" type="s:string" />
+    <wsdl:part name="strActionID" type="s:string" />
+    <wsdl:part name="DiscountMoney" type="s:string" />
+    <wsdl:part name="CanUseEndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsEcouponDataJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateMemberJSONHttpGetIn">
+    <wsdl:part name="strCardKind" type="s:string" />
+    <wsdl:part name="strName" type="s:string" />
+    <wsdl:part name="strPapersType" type="s:string" />
+    <wsdl:part name="strPapersID" type="s:string" />
+    <wsdl:part name="strBirthday" type="s:string" />
+    <wsdl:part name="strSex" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strAdd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateMemberJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistVerifyJSONHttpGetIn">
+    <wsdl:part name="strCardNo" type="s:string" />
+    <wsdl:part name="strPapersID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistVerifyJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountIsLockJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountIsLockJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdAccountLockFieldJSONHttpGetIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdAccountLockFieldJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginVerifyJSONHttpGetIn">
+    <wsdl:part name="strAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginVerifyJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForgetVerifyJSONHttpGetIn">
+    <wsdl:part name="strPapersID" type="s:string" />
+    <wsdl:part name="strBirthday" type="s:string" />
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForgetVerifyJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOldRegistVerifyJSONHttpGetIn">
+    <wsdl:part name="strAllPapersID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOldRegistVerifyJSONHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardDataJSONHttpPostIn">
+    <wsdl:part name="strPapersID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardDataJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointExpireJSONHttpPostIn">
+    <wsdl:part name="strCardNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointExpireJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCardPointUseJSONHttpPostIn">
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strPoint" type="s:string" />
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strUseItem" type="s:string" />
+    <wsdl:part name="strProfitCenter" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCardPointUseJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointUseListJOSNHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strStartDate" type="s:string" />
+    <wsdl:part name="strEndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardPointUseListJOSNHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardBuyListJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strStartDate" type="s:string" />
+    <wsdl:part name="strEndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCardBuyListJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDataJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strCardNo" type="s:string" />
+    <wsdl:part name="strName" type="s:string" />
+    <wsdl:part name="strPapersID" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetCustDataJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCustDataJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strAddress_ZipCode" type="s:string" />
+    <wsdl:part name="strAddress" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strHobby" type="s:string" />
+    <wsdl:part name="strInterest" type="s:string" />
+    <wsdl:part name="IsVerify" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdCustDataJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsApplyCardJSONHttpPostIn">
+    <wsdl:part name="strGUID" type="s:string" />
+    <wsdl:part name="strName" type="s:string" />
+    <wsdl:part name="PapersType" type="s:string" />
+    <wsdl:part name="PapersID" type="s:string" />
+    <wsdl:part name="strSex" type="s:string" />
+    <wsdl:part name="strBirthday" type="s:string" />
+    <wsdl:part name="TelPhone_Tel" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strAddress_ZipCode" type="s:string" />
+    <wsdl:part name="strAddress" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strHobby" type="s:string" />
+    <wsdl:part name="strInterest" type="s:string" />
+    <wsdl:part name="CardType" type="s:string" />
+    <wsdl:part name="CardKind" type="s:string" />
+    <wsdl:part name="Apply_Store" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsApplyCardJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdGetMsgEpaperJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strIsMsg" type="s:string" />
+    <wsdl:part name="strIsEpaper" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdGetMsgEpaperJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEcouponListJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetEcouponListJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="InsEcouponDataJSONHttpPostIn">
+    <wsdl:part name="strCardNo" type="s:string" />
+    <wsdl:part name="EcouponID" type="s:string" />
+    <wsdl:part name="strActionID" type="s:string" />
+    <wsdl:part name="DiscountMoney" type="s:string" />
+    <wsdl:part name="CanUseEndDate" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="InsEcouponDataJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateMemberJSONHttpPostIn">
+    <wsdl:part name="strCardKind" type="s:string" />
+    <wsdl:part name="strName" type="s:string" />
+    <wsdl:part name="strPapersType" type="s:string" />
+    <wsdl:part name="strPapersID" type="s:string" />
+    <wsdl:part name="strBirthday" type="s:string" />
+    <wsdl:part name="strSex" type="s:string" />
+    <wsdl:part name="strMobilePhone" type="s:string" />
+    <wsdl:part name="strEmail" type="s:string" />
+    <wsdl:part name="strAdd" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="CreateMemberJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistVerifyJSONHttpPostIn">
+    <wsdl:part name="strCardNo" type="s:string" />
+    <wsdl:part name="strPapersID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetRegistVerifyJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountIsLockJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetAccountIsLockJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdAccountLockFieldJSONHttpPostIn">
+    <wsdl:part name="strCustNo" type="s:string" />
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="UpdAccountLockFieldJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginVerifyJSONHttpPostIn">
+    <wsdl:part name="strAccount" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetLoginVerifyJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForgetVerifyJSONHttpPostIn">
+    <wsdl:part name="strPapersID" type="s:string" />
+    <wsdl:part name="strBirthday" type="s:string" />
+    <wsdl:part name="strFlag" type="s:string" />
+    <wsdl:part name="strValue" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetForgetVerifyJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOldRegistVerifyJSONHttpPostIn">
+    <wsdl:part name="strAllPapersID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="GetOldRegistVerifyJSONHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:portType name="BFCRMWebServiceSoap">
+    <wsdl:operation name="GetCardDataJSON">
+      <wsdl:input message="tns:GetCardDataJSONSoapIn" />
+      <wsdl:output message="tns:GetCardDataJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointJSON">
+      <wsdl:input message="tns:GetCardPointJSONSoapIn" />
+      <wsdl:output message="tns:GetCardPointJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointExpireJSON">
+      <wsdl:input message="tns:GetCardPointExpireJSONSoapIn" />
+      <wsdl:output message="tns:GetCardPointExpireJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdCardPointUseJSON">
+      <wsdl:input message="tns:UpdCardPointUseJSONSoapIn" />
+      <wsdl:output message="tns:UpdCardPointUseJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointUseListJOSN">
+      <wsdl:input message="tns:GetCardPointUseListJOSNSoapIn" />
+      <wsdl:output message="tns:GetCardPointUseListJOSNSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardBuyListJSON">
+      <wsdl:input message="tns:GetCardBuyListJSONSoapIn" />
+      <wsdl:output message="tns:GetCardBuyListJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDataJSON">
+      <wsdl:input message="tns:GetCustDataJSONSoapIn" />
+      <wsdl:output message="tns:GetCustDataJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdCustDataJSON">
+      <wsdl:input message="tns:UpdCustDataJSONSoapIn" />
+      <wsdl:output message="tns:UpdCustDataJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsApplyCardJSON">
+      <wsdl:input message="tns:InsApplyCardJSONSoapIn" />
+      <wsdl:output message="tns:InsApplyCardJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdGetMsgEpaperJSON">
+      <wsdl:input message="tns:UpdGetMsgEpaperJSONSoapIn" />
+      <wsdl:output message="tns:UpdGetMsgEpaperJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEcouponListJSON">
+      <wsdl:input message="tns:GetEcouponListJSONSoapIn" />
+      <wsdl:output message="tns:GetEcouponListJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsEcouponDataJSON">
+      <wsdl:input message="tns:InsEcouponDataJSONSoapIn" />
+      <wsdl:output message="tns:InsEcouponDataJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMemberJSON">
+      <wsdl:input message="tns:CreateMemberJSONSoapIn" />
+      <wsdl:output message="tns:CreateMemberJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistVerifyJSON">
+      <wsdl:input message="tns:GetRegistVerifyJSONSoapIn" />
+      <wsdl:output message="tns:GetRegistVerifyJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountIsLockJSON">
+      <wsdl:input message="tns:GetAccountIsLockJSONSoapIn" />
+      <wsdl:output message="tns:GetAccountIsLockJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdAccountLockFieldJSON">
+      <wsdl:input message="tns:UpdAccountLockFieldJSONSoapIn" />
+      <wsdl:output message="tns:UpdAccountLockFieldJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginVerifyJSON">
+      <wsdl:input message="tns:GetLoginVerifyJSONSoapIn" />
+      <wsdl:output message="tns:GetLoginVerifyJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForgetVerifyJSON">
+      <wsdl:input message="tns:GetForgetVerifyJSONSoapIn" />
+      <wsdl:output message="tns:GetForgetVerifyJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldRegistVerifyJSON">
+      <wsdl:input message="tns:GetOldRegistVerifyJSONSoapIn" />
+      <wsdl:output message="tns:GetOldRegistVerifyJSONSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrmUpdAccountLockField">
+      <wsdl:input message="tns:CrmUpdAccountLockFieldSoapIn" />
+      <wsdl:output message="tns:CrmUpdAccountLockFieldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CrmUpdateEmailField">
+      <wsdl:input message="tns:CrmUpdateEmailFieldSoapIn" />
+      <wsdl:output message="tns:CrmUpdateEmailFieldSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BFCRMWebServiceHttpGet">
+    <wsdl:operation name="GetCardDataJSON">
+      <wsdl:input message="tns:GetCardDataJSONHttpGetIn" />
+      <wsdl:output message="tns:GetCardDataJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointJSON">
+      <wsdl:input message="tns:GetCardPointJSONHttpGetIn" />
+      <wsdl:output message="tns:GetCardPointJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointExpireJSON">
+      <wsdl:input message="tns:GetCardPointExpireJSONHttpGetIn" />
+      <wsdl:output message="tns:GetCardPointExpireJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdCardPointUseJSON">
+      <wsdl:input message="tns:UpdCardPointUseJSONHttpGetIn" />
+      <wsdl:output message="tns:UpdCardPointUseJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointUseListJOSN">
+      <wsdl:input message="tns:GetCardPointUseListJOSNHttpGetIn" />
+      <wsdl:output message="tns:GetCardPointUseListJOSNHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardBuyListJSON">
+      <wsdl:input message="tns:GetCardBuyListJSONHttpGetIn" />
+      <wsdl:output message="tns:GetCardBuyListJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDataJSON">
+      <wsdl:input message="tns:GetCustDataJSONHttpGetIn" />
+      <wsdl:output message="tns:GetCustDataJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdCustDataJSON">
+      <wsdl:input message="tns:UpdCustDataJSONHttpGetIn" />
+      <wsdl:output message="tns:UpdCustDataJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsApplyCardJSON">
+      <wsdl:input message="tns:InsApplyCardJSONHttpGetIn" />
+      <wsdl:output message="tns:InsApplyCardJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdGetMsgEpaperJSON">
+      <wsdl:input message="tns:UpdGetMsgEpaperJSONHttpGetIn" />
+      <wsdl:output message="tns:UpdGetMsgEpaperJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEcouponListJSON">
+      <wsdl:input message="tns:GetEcouponListJSONHttpGetIn" />
+      <wsdl:output message="tns:GetEcouponListJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsEcouponDataJSON">
+      <wsdl:input message="tns:InsEcouponDataJSONHttpGetIn" />
+      <wsdl:output message="tns:InsEcouponDataJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMemberJSON">
+      <wsdl:input message="tns:CreateMemberJSONHttpGetIn" />
+      <wsdl:output message="tns:CreateMemberJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistVerifyJSON">
+      <wsdl:input message="tns:GetRegistVerifyJSONHttpGetIn" />
+      <wsdl:output message="tns:GetRegistVerifyJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountIsLockJSON">
+      <wsdl:input message="tns:GetAccountIsLockJSONHttpGetIn" />
+      <wsdl:output message="tns:GetAccountIsLockJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdAccountLockFieldJSON">
+      <wsdl:input message="tns:UpdAccountLockFieldJSONHttpGetIn" />
+      <wsdl:output message="tns:UpdAccountLockFieldJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginVerifyJSON">
+      <wsdl:input message="tns:GetLoginVerifyJSONHttpGetIn" />
+      <wsdl:output message="tns:GetLoginVerifyJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForgetVerifyJSON">
+      <wsdl:input message="tns:GetForgetVerifyJSONHttpGetIn" />
+      <wsdl:output message="tns:GetForgetVerifyJSONHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldRegistVerifyJSON">
+      <wsdl:input message="tns:GetOldRegistVerifyJSONHttpGetIn" />
+      <wsdl:output message="tns:GetOldRegistVerifyJSONHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="BFCRMWebServiceHttpPost">
+    <wsdl:operation name="GetCardDataJSON">
+      <wsdl:input message="tns:GetCardDataJSONHttpPostIn" />
+      <wsdl:output message="tns:GetCardDataJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointJSON">
+      <wsdl:input message="tns:GetCardPointJSONHttpPostIn" />
+      <wsdl:output message="tns:GetCardPointJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointExpireJSON">
+      <wsdl:input message="tns:GetCardPointExpireJSONHttpPostIn" />
+      <wsdl:output message="tns:GetCardPointExpireJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdCardPointUseJSON">
+      <wsdl:input message="tns:UpdCardPointUseJSONHttpPostIn" />
+      <wsdl:output message="tns:UpdCardPointUseJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointUseListJOSN">
+      <wsdl:input message="tns:GetCardPointUseListJOSNHttpPostIn" />
+      <wsdl:output message="tns:GetCardPointUseListJOSNHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCardBuyListJSON">
+      <wsdl:input message="tns:GetCardBuyListJSONHttpPostIn" />
+      <wsdl:output message="tns:GetCardBuyListJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDataJSON">
+      <wsdl:input message="tns:GetCustDataJSONHttpPostIn" />
+      <wsdl:output message="tns:GetCustDataJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdCustDataJSON">
+      <wsdl:input message="tns:UpdCustDataJSONHttpPostIn" />
+      <wsdl:output message="tns:UpdCustDataJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsApplyCardJSON">
+      <wsdl:input message="tns:InsApplyCardJSONHttpPostIn" />
+      <wsdl:output message="tns:InsApplyCardJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdGetMsgEpaperJSON">
+      <wsdl:input message="tns:UpdGetMsgEpaperJSONHttpPostIn" />
+      <wsdl:output message="tns:UpdGetMsgEpaperJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetEcouponListJSON">
+      <wsdl:input message="tns:GetEcouponListJSONHttpPostIn" />
+      <wsdl:output message="tns:GetEcouponListJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InsEcouponDataJSON">
+      <wsdl:input message="tns:InsEcouponDataJSONHttpPostIn" />
+      <wsdl:output message="tns:InsEcouponDataJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateMemberJSON">
+      <wsdl:input message="tns:CreateMemberJSONHttpPostIn" />
+      <wsdl:output message="tns:CreateMemberJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistVerifyJSON">
+      <wsdl:input message="tns:GetRegistVerifyJSONHttpPostIn" />
+      <wsdl:output message="tns:GetRegistVerifyJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountIsLockJSON">
+      <wsdl:input message="tns:GetAccountIsLockJSONHttpPostIn" />
+      <wsdl:output message="tns:GetAccountIsLockJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdAccountLockFieldJSON">
+      <wsdl:input message="tns:UpdAccountLockFieldJSONHttpPostIn" />
+      <wsdl:output message="tns:UpdAccountLockFieldJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginVerifyJSON">
+      <wsdl:input message="tns:GetLoginVerifyJSONHttpPostIn" />
+      <wsdl:output message="tns:GetLoginVerifyJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetForgetVerifyJSON">
+      <wsdl:input message="tns:GetForgetVerifyJSONHttpPostIn" />
+      <wsdl:output message="tns:GetForgetVerifyJSONHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOldRegistVerifyJSON">
+      <wsdl:input message="tns:GetOldRegistVerifyJSONHttpPostIn" />
+      <wsdl:output message="tns:GetOldRegistVerifyJSONHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BFCRMWebServiceSoap" type="tns:BFCRMWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCardDataJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCardDataJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCardPointJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointExpireJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCardPointExpireJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCardPointUseJSON">
+      <soap:operation soapAction="http://tempuri.org/UpdCardPointUseJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointUseListJOSN">
+      <soap:operation soapAction="http://tempuri.org/GetCardPointUseListJOSN" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardBuyListJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCardBuyListJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDataJSON">
+      <soap:operation soapAction="http://tempuri.org/GetCustDataJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCustDataJSON">
+      <soap:operation soapAction="http://tempuri.org/UpdCustDataJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsApplyCardJSON">
+      <soap:operation soapAction="http://tempuri.org/InsApplyCardJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdGetMsgEpaperJSON">
+      <soap:operation soapAction="http://tempuri.org/UpdGetMsgEpaperJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEcouponListJSON">
+      <soap:operation soapAction="http://tempuri.org/GetEcouponListJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsEcouponDataJSON">
+      <soap:operation soapAction="http://tempuri.org/InsEcouponDataJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMemberJSON">
+      <soap:operation soapAction="http://tempuri.org/CreateMemberJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistVerifyJSON">
+      <soap:operation soapAction="http://tempuri.org/GetRegistVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountIsLockJSON">
+      <soap:operation soapAction="http://tempuri.org/GetAccountIsLockJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdAccountLockFieldJSON">
+      <soap:operation soapAction="http://tempuri.org/UpdAccountLockFieldJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginVerifyJSON">
+      <soap:operation soapAction="http://tempuri.org/GetLoginVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForgetVerifyJSON">
+      <soap:operation soapAction="http://tempuri.org/GetForgetVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldRegistVerifyJSON">
+      <soap:operation soapAction="http://tempuri.org/GetOldRegistVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrmUpdAccountLockField">
+      <soap:operation soapAction="http://tempuri.org/CrmUpdAccountLockField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrmUpdateEmailField">
+      <soap:operation soapAction="http://tempuri.org/CrmUpdateEmailField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BFCRMWebServiceSoap12" type="tns:BFCRMWebServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetCardDataJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCardDataJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCardPointJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointExpireJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCardPointExpireJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCardPointUseJSON">
+      <soap12:operation soapAction="http://tempuri.org/UpdCardPointUseJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointUseListJOSN">
+      <soap12:operation soapAction="http://tempuri.org/GetCardPointUseListJOSN" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardBuyListJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCardBuyListJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDataJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetCustDataJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCustDataJSON">
+      <soap12:operation soapAction="http://tempuri.org/UpdCustDataJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsApplyCardJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsApplyCardJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdGetMsgEpaperJSON">
+      <soap12:operation soapAction="http://tempuri.org/UpdGetMsgEpaperJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEcouponListJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetEcouponListJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsEcouponDataJSON">
+      <soap12:operation soapAction="http://tempuri.org/InsEcouponDataJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMemberJSON">
+      <soap12:operation soapAction="http://tempuri.org/CreateMemberJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistVerifyJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetRegistVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountIsLockJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetAccountIsLockJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdAccountLockFieldJSON">
+      <soap12:operation soapAction="http://tempuri.org/UpdAccountLockFieldJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginVerifyJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetLoginVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForgetVerifyJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetForgetVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldRegistVerifyJSON">
+      <soap12:operation soapAction="http://tempuri.org/GetOldRegistVerifyJSON" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrmUpdAccountLockField">
+      <soap12:operation soapAction="http://tempuri.org/CrmUpdAccountLockField" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CrmUpdateEmailField">
+      <soap12:operation soapAction="http://tempuri.org/CrmUpdateEmailField" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BFCRMWebServiceHttpGet" type="tns:BFCRMWebServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="GetCardDataJSON">
+      <http:operation location="/GetCardDataJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointJSON">
+      <http:operation location="/GetCardPointJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointExpireJSON">
+      <http:operation location="/GetCardPointExpireJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCardPointUseJSON">
+      <http:operation location="/UpdCardPointUseJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointUseListJOSN">
+      <http:operation location="/GetCardPointUseListJOSN" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardBuyListJSON">
+      <http:operation location="/GetCardBuyListJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDataJSON">
+      <http:operation location="/GetCustDataJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCustDataJSON">
+      <http:operation location="/UpdCustDataJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsApplyCardJSON">
+      <http:operation location="/InsApplyCardJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdGetMsgEpaperJSON">
+      <http:operation location="/UpdGetMsgEpaperJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEcouponListJSON">
+      <http:operation location="/GetEcouponListJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsEcouponDataJSON">
+      <http:operation location="/InsEcouponDataJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMemberJSON">
+      <http:operation location="/CreateMemberJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistVerifyJSON">
+      <http:operation location="/GetRegistVerifyJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountIsLockJSON">
+      <http:operation location="/GetAccountIsLockJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdAccountLockFieldJSON">
+      <http:operation location="/UpdAccountLockFieldJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginVerifyJSON">
+      <http:operation location="/GetLoginVerifyJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForgetVerifyJSON">
+      <http:operation location="/GetForgetVerifyJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldRegistVerifyJSON">
+      <http:operation location="/GetOldRegistVerifyJSON" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="BFCRMWebServiceHttpPost" type="tns:BFCRMWebServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="GetCardDataJSON">
+      <http:operation location="/GetCardDataJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointJSON">
+      <http:operation location="/GetCardPointJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointExpireJSON">
+      <http:operation location="/GetCardPointExpireJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCardPointUseJSON">
+      <http:operation location="/UpdCardPointUseJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardPointUseListJOSN">
+      <http:operation location="/GetCardPointUseListJOSN" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCardBuyListJSON">
+      <http:operation location="/GetCardBuyListJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCustDataJSON">
+      <http:operation location="/GetCustDataJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdCustDataJSON">
+      <http:operation location="/UpdCustDataJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsApplyCardJSON">
+      <http:operation location="/InsApplyCardJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdGetMsgEpaperJSON">
+      <http:operation location="/UpdGetMsgEpaperJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetEcouponListJSON">
+      <http:operation location="/GetEcouponListJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsEcouponDataJSON">
+      <http:operation location="/InsEcouponDataJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateMemberJSON">
+      <http:operation location="/CreateMemberJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRegistVerifyJSON">
+      <http:operation location="/GetRegistVerifyJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountIsLockJSON">
+      <http:operation location="/GetAccountIsLockJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdAccountLockFieldJSON">
+      <http:operation location="/UpdAccountLockFieldJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLoginVerifyJSON">
+      <http:operation location="/GetLoginVerifyJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetForgetVerifyJSON">
+      <http:operation location="/GetForgetVerifyJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOldRegistVerifyJSON">
+      <http:operation location="/GetOldRegistVerifyJSON" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="BFCRMWebService">
+    <wsdl:port name="BFCRMWebServiceSoap" binding="tns:BFCRMWebServiceSoap">
+      <soap:address location="http://10.128.252.22:222/BFCRMWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BFCRMWebServiceSoap12" binding="tns:BFCRMWebServiceSoap12">
+      <soap12:address location="http://10.128.252.22:222/BFCRMWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BFCRMWebServiceHttpGet" binding="tns:BFCRMWebServiceHttpGet">
+      <http:address location="http://10.128.252.22:222/BFCRMWebService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="BFCRMWebServiceHttpPost" binding="tns:BFCRMWebServiceHttpPost">
+      <http:address location="http://10.128.252.22:222/BFCRMWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
