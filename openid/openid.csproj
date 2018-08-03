@@ -71,12 +71,32 @@
     <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-datetimepicker.min.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap-datetimepicker.min.js" />
+    <Content Include="bootstrap\js\bootstrap-datetimepicker.zh-TW.js" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="favicon.ico" />
     <Content Include="img\eslite.png" />
     <Content Include="login.aspx" />
     <Content Include="modify.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="script\images\ui-icons_444444_256x240.png" />
+    <Content Include="script\images\ui-icons_555555_256x240.png" />
+    <Content Include="script\images\ui-icons_777620_256x240.png" />
+    <Content Include="script\images\ui-icons_777777_256x240.png" />
+    <Content Include="script\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="script\images\ui-icons_ffffff_256x240.png" />
     <Content Include="script\packages.config" />
     <Content Include="script\jquery-1.10.2.min.map" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

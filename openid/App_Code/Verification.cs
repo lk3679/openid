@@ -7,7 +7,6 @@ namespace openid
 {
     public class Verification
     {
-
         public static  string RemoveOenIDByDataID(string ID)
         {
             if (string.IsNullOrEmpty(ID))
@@ -31,9 +30,10 @@ namespace openid
         public static string QueryByPhone(string mobilephone)
         {
                             
-            string sql = @"SELECT VerificationDataId, 
-                                              [MobilePhone],
-		                                        [VerifyCode]
+            string sql = @"SELECT ROW_NUMBER()   OVER (ORDER BY VerificationDataId)  AS ROWID
+                                                ,VerificationDataId
+                                              ,[MobilePhone]
+		                                      ,[VerifyCode]
                                               ,[VerifyExpiredTime]
                                               ,[TokenBindingDate]
                                               ,[CreatedTime]
@@ -44,6 +44,19 @@ namespace openid
             if (!string.IsNullOrEmpty(mobilephone))
                 sql += string.Format(" where vd.MobilePhone='{0}'", mobilephone);
 
+            return sql;
+        }
+
+        public static string GetAllVerificationData()
+        {
+            string sql = QueryByPhone("");
+            return sql;
+        }
+
+        public static string QueryByDate(string StartDate,string EndDate)
+        {
+            string sql = QueryByPhone("");
+            sql += string.Format(" where [CreatedTime] between '{0}' and  '{1}' ", StartDate, EndDate);
             return sql;
         }
     }
