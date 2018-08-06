@@ -39,31 +39,38 @@
 
             });
 
+            $("#query").click(function () {
+
+                var mobile = $("#<%=mobile.ClientID %>").val();
+                var CardNo = $("#<%=CardNo.ClientID %>").val();
+                window.location.href = "default.aspx?Act=query&mobile=" + mobile + "&CardNo=" + CardNo;
+            })
+
             $("#queryByDate").click(function () {
 
                 var startdae = $("#<%=StartDate.ClientID %>").val();
                 var enddate = $("#<%=EndDate.ClientID %>").val();
-                window.location.href = "default.aspx?pageIndex=1&startdate=" + startdae + "&enddate=" + enddate;
+                window.location.href = "default.aspx?Act=date&pageIndex=1&startdate=" + startdae + "&enddate=" + enddate;
             })
 
             $("#firstPage").click(function () {
                 var startdae = $("#<%=StartDate.ClientID %>").val();
                 var enddate = $("#<%=EndDate.ClientID %>").val();
-                window.location.href = "default.aspx?pageIndex=1&startdate=" + startdae + "&enddate=" + enddate;
+                window.location.href = "default.aspx?Act=date&pageIndex=1&startdate=" + startdae + "&enddate=" + enddate;
             })
 
             $("#lastPage").click(function () {
                 var startdae = $("#<%=StartDate.ClientID %>").val();
                 var enddate = $("#<%=EndDate.ClientID %>").val();
                 var page =<%=pageEnd %>;
-                window.location.href = "default.aspx?pageIndex=" + page+"&startdate=" + startdae + "&enddate=" + enddate;
+                window.location.href = "default.aspx?Act=date&pageIndex=" + page+"&startdate=" + startdae + "&enddate=" + enddate;
             })
 
             $(".pager").click(function () {
                 var startdae = $("#<%=StartDate.ClientID %>").val();
                 var enddate = $("#<%=EndDate.ClientID %>").val();
                 var pageIndex = $(this).attr("data-page");
-                window.location.href = "default.aspx?pageIndex=" + pageIndex  + "&startdate=" + startdae + "&enddate=" + enddate;
+                window.location.href = "default.aspx?act=date&pageIndex=" + pageIndex  + "&startdate=" + startdae + "&enddate=" + enddate;
             })
 
 
@@ -124,7 +131,8 @@
              <h5>請輸入卡號</h5>  
               <asp:TextBox ID="CardNo" runat="server"></asp:TextBox><br />
               <br />
-            <asp:Button ID="QueryBtn" runat="server" Text="查詢" OnClick="Button1_Click" CssClass="btn btn-primary" />
+            <input type="button" id="query" value="查詢" class=" btn btn-primary" />
+    
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               <asp:Button ID="ExportCSV" runat="server" Text="匯出所有資料" Visible="false"  CssClass ="btn btn-primary" OnClick="ExportCSV_Click" />
               <br />
@@ -189,7 +197,7 @@
                       { %>
 
       <% string activie = (i == pageNow) ? "page-item active" : "page-item"; %>
-       <li class="<%=activie %>"><a class="page-link pager" href="#"  data-page="<%=i %>" ><%=i %></a></li>
+       <li class="<%=activie %>"><a class="page-link pager" href="javascript:void(0);"  data-page="<%=i %>" ><%=i %></a></li>
       <%} %>
 
   </ul>

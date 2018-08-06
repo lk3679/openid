@@ -34,9 +34,29 @@ namespace openid
             {
                 AdminName = Session["userID"].ToString();
             }
+            
+            string Act = "";
 
+            if(string.IsNullOrEmpty(Request["Act"]) == false){
+                Act = Request["Act"];
+            }
+
+            switch (Act)
+            {
+                case "query":
+                    query();
+                    break;
+                case "date":
+                    paging();
+                    break;
+
+            }         
+
+        }
+
+        public void paging()
+        {
             string pageIndex = "";
-
             if (string.IsNullOrEmpty(Request["pageIndex"]) == false)
             {
                 pageIndex = Request["pageIndex"];
@@ -53,33 +73,42 @@ namespace openid
                 {
                     ResultLabel.Text = "輸入的分頁錯誤";
                 }
-               
-            }
 
+            }
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        public void query()
         {
-            string mobilephone = mobile.Text;
-            string cardno = CardNo.Text;
+            string mobilephone = "";
+            string cardno = "";
+
+            if (string.IsNullOrEmpty(Request["CardNo"]) == false)
+            {
+                cardno = Request["CardNo"];
+            }
+
+            if (string.IsNullOrEmpty(Request["mobile"]) == false)
+            {
+                mobilephone = Request["mobile"];
+            }
+
 
             if (mobilephone.Length > 0)
             {
                 if (IsPhoneNumber(mobilephone) == false)
                 {
-                    ResultLabel.Text = string.Format("手機號碼{0}格式輸入錯誤",mobilephone);
-                    mobile.Text = "";
+                    ResultLabel.Text = string.Format("手機號碼{0}格式輸入錯誤", mobilephone);
                     return;
                 }
             }
-            
+
             //if cardno has value,query by cardno first
             if (!string.IsNullOrEmpty(cardno))
             {
                 //Get User phoneNumber by cardNo
-                CustData CD = new CustData();              
-                BFCRMWebService crm = new BFCRMWebService();             
-                string cust= crm.GetCustDataJSON("",cardno,"","","","");
+                CustData CD = new CustData();
+                BFCRMWebService crm = new BFCRMWebService();
+                string cust = crm.GetCustDataJSON("", cardno, "", "", "", "");
                 if (!string.IsNullOrEmpty(cust))
                     CD = JsonConvert.DeserializeObject<CustData>(cust);
 
@@ -108,7 +137,9 @@ namespace openid
                 ResultLabel.Text = "查無資料";
             else
                 ResultLabel.Text = string.Format("共有{0}筆資料", dt.Rows.Count.ToString());
+
         }
+
 
         protected void LogOut_Click(object sender, EventArgs e)
         {
