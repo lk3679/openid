@@ -134,7 +134,7 @@
             <input type="button" id="query" value="查詢" class=" btn btn-primary" />
     
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <asp:Button ID="ExportCSV" runat="server" Text="匯出所有資料" Visible="false"  CssClass ="btn btn-primary" OnClick="ExportCSV_Click" />
+              <asp:Button ID="ExportCSV" runat="server" Text="取得每月匯出資料"  CssClass ="btn btn-primary" OnClick="ExportCSV_Click" />
               <br />
               <br />
   

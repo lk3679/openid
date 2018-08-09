@@ -149,48 +149,7 @@ namespace openid
 
         protected void ExportCSV_Click(object sender, EventArgs e)
         {
-
-            string sql = Verification.GetAllVerificationData();
-            dt = Utility.getDataTable(sql);
-
-            if (dt.Rows.Count == 0)
-            {
-                ResultLabel.Text = "查無資料，請稍後再試";
-                return;
-            }
-
-            string csv = string.Empty;
-            foreach (DataColumn column in dt.Columns)
-            {
-                csv += column.ColumnName + ',';
-            }
-            //Add new line.
-            csv += "\r\n";
-
-            foreach (DataRow row in dt.Rows)
-            {
-                foreach (DataColumn column in dt.Columns)
-                {
-                    //Add the Data rows.
-                    csv += row[column.ColumnName].ToString().Replace(",", ";") + ',';
-                }
-                //Add new line.
-                csv += "\r\n";
-            }
-
-            string Filename = string.Format("ExportData_{0}.csv", DateTime.Now.ToString("yyyyMMddhhmmss"));
-            Response.Clear();
-            Response.Buffer = true;
-            Response.HeaderEncoding= System.Text.Encoding.UTF8;
-            Response.AddHeader("content-disposition", "attachment;filename="+ Filename);
-            Response.Charset = "";
-            Response.ContentType = "application/octet-stream";
-            System.IO.StreamWriter sw =new System.IO.StreamWriter(Response.OutputStream,System.Text.Encoding.UTF8);
-            sw.Write(csv);
-            sw.Close();
-            Response.Flush();
-            Response.End();
-
+            Response.Redirect("download.aspx");
         }
 
         protected void QueryByDateBtn_Click(object sender, EventArgs e)

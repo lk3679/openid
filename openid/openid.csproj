@@ -81,6 +81,7 @@
     <Content Include="bootstrap\js\bootstrap-datetimepicker.zh-TW.js" />
     <Content Include="bootstrap\js\bootstrap.js" />
     <Content Include="bootstrap\js\bootstrap.min.js" />
+    <Content Include="download.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="img\eslite.png" />
     <Content Include="login.aspx" />
@@ -152,6 +153,13 @@
   <ItemGroup>
     <Compile Include="App_Code\Utility.cs" />
     <Compile Include="App_Code\Verification.cs" />
+    <Compile Include="download.aspx.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="download.aspx.designer.cs">
+      <DependentUpon>download.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
