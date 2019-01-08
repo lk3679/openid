@@ -11,7 +11,8 @@
         html, body {
         background-color: #eee;
       }
-    </style>
+    </style>
+
 </head>
 <body>
     <br />

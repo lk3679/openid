@@ -16,7 +16,7 @@
     <script src="bootstrap/js/bootstrap-datetimepicker.zh-TW.js"></script>
     <style>
         html, body {
-        background-color: #eee;
+        background-color: #ffffff;
       }
 
  
@@ -24,20 +24,24 @@
     <script type="text/javascript" >
         
         $().ready(function () {
+
             //console.log("ok");
             $(".edit").click(function () {            
                 var id = $(this).attr("data-vdid");
+                var cardno = $("#" + id + "_cardno").val();
                 if (id != "") {
                     var r = confirmAct("edit");
                     if (r == false) {
                         return;
                     }
-                    window.location.href = "modify.aspx?act=edit&id="+id;
+                    window.location.href = "modify.aspx?act=edit&id=" + id + "&cardNo=" + cardno;
                 }
 
                 
 
             });
+
+         
 
             $("#query").click(function () {
 
@@ -76,12 +80,13 @@
 
             $(".delete").click(function () {
                 var id = $(this).attr("data-vdid");
+                var cardno = $("#" + id + "_cardno").val();
                 if (id != "") {
                     var r = confirmAct("delete");
                     if (r == false) {
                         return;
                     }
-                    window.location.href = "modify.aspx?act=delete&id=" + id;
+                    window.location.href = "modify.aspx?act=delete&id=" + id + "&cardNo=" + cardno;
                 }
             });
         });
@@ -106,12 +111,8 @@
    
     <form id="form1" runat="server">
         <%
-            
-            if (pageNow < 10)
-            {          
-                pageEnd = 10;
-            }
-            else
+
+           if (pageEnd > 10 && pageNow >=10)
             {
                 pageStart = pageNow - 5;
                 if (pageNow + 5 < pageEnd)
@@ -119,27 +120,32 @@
                     pageEnd = pageNow + 5;
                 }
             }
+            else if(pageEnd > 10 && pageNow < 10)
+            {
+                pageEnd = 10;
+            }
             
+
             %>
           <div class="container">
            
               <span style="color:#0026ff">
-             <%=AdminName %>你好，歡迎登入管理系統</span>
-        <asp:Button ID="LogOut" runat="server" Text="登出系統" CssClass="btn btn-default" OnClick="LogOut_Click"  /><br />
+             <%=AdminName %>你好，歡迎登入管理系統</span>&nbsp;&nbsp;&nbsp;&nbsp;<a href="?act=logout" class="btn btn-default">登出</a>        
             <h5>請輸入手機號碼</h5>     
             <asp:TextBox ID="mobile" runat="server"></asp:TextBox>
              <h5>請輸入卡號</h5>  
               <asp:TextBox ID="CardNo" runat="server"></asp:TextBox><br />
               <br />
-            <input type="button" id="query" value="查詢" class=" btn btn-primary" />
+            <input type="button" id="query" value="查詢" class=" btn btn-primary" onfocus="true" />
     
               &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <asp:Button ID="ExportCSV" runat="server" Text="取得每月匯出資料"  CssClass ="btn btn-primary" OnClick="ExportCSV_Click" />
+              
+              <a href="download.aspx"  class="btn btn-primary">取得每月匯出資料</a>
               <br />
               <br />
   
-              開始日期<asp:TextBox ID="StartDate" runat="server"></asp:TextBox>
-&nbsp; 結束日期<asp:TextBox ID="EndDate" runat="server"></asp:TextBox>
+              開始日期：<asp:TextBox ID="StartDate" runat="server"></asp:TextBox>
+&nbsp; 結束日期：<asp:TextBox ID="EndDate" runat="server"></asp:TextBox>
               <br />
               <br />
               <input type="button" id="queryByDate" value="用日期查詢" class=" btn btn-primary" />
@@ -150,7 +156,7 @@
 
             <%--<input type="button" value="搜尋" id="query" class="btn btn-primary" />--%>
               <asp:Label ID="ResultLabel" runat="server" Text="" ForeColor="Red"></asp:Label>
-   <table class="table table-hover table-bordered" > 
+   <table class="table table-striped" > 
     <thead>
       <tr>
           <th></th>
@@ -163,6 +169,7 @@
          <th>建立時間</th>
         <th>地區</th>
         <th>微信openid</th>
+          <th>卡號</th>
       </tr>
     </thead>
     <tbody>
@@ -181,6 +188,7 @@
         <td><%=dr["CreatedTime"].ToString() %></td>
         <td><%=dr["LiveArea"].ToString() %></td>
           <td><%=dr["wechatopenid"].ToString() %></td>
+             <td ><input  disabled="disabled"   type="text" id="<%=dr["VerificationDataId"].ToString() %>_cardno" value="<%=dr["CardNo"].ToString() %>" /></td>
       </tr>
    <%} %>
         <%} %>

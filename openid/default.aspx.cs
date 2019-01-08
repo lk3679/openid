@@ -49,6 +49,10 @@ namespace openid
                 case "date":
                     paging();
                     break;
+                case "logout":
+                    Session.Clear();
+                    Response.Redirect("login.aspx");
+                    break;
 
             }         
 
@@ -132,6 +136,36 @@ namespace openid
 
             string sql = Verification.QueryByPhone(mobilephone);
             dt = Utility.getDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                DataColumn  column = new DataColumn();
+                column.DataType = Type.GetType("System.String");
+                column.ColumnName = "CardNo";
+                dt.Columns.Add(column);
+            }
+            //call  長益CRM
+            //多增加卡號
+            foreach(DataRow dr in dt.Rows)
+            {
+                string PapersID = dr["PapersID"].ToString();
+                if (string.IsNullOrEmpty(PapersID) == false)
+                {
+                    string CardNumber = "";
+                    CustData CD = new CustData();
+                    BFCRMWebService crm = new BFCRMWebService();
+                    string cust = crm.GetCustDataJSON("","", "", PapersID, "", "");
+                    if (!string.IsNullOrEmpty(cust))
+                    {
+                        CD = JsonConvert.DeserializeObject<CustData>(cust);
+                        if (CD.RC == "0")
+                            CardNumber = CD.CustList[0].CardNo;
+                        else
+                            CardNumber = CD.RM;
+                    }
+
+                    dr["CardNo"] = CardNumber;   
+                }
+            }
 
             if (dt.Rows.Count == 0)
                 ResultLabel.Text = "查無資料";
@@ -141,16 +175,8 @@ namespace openid
         }
 
 
-        protected void LogOut_Click(object sender, EventArgs e)
-        {
-            Session.RemoveAll();
-            Response.Write("<script>alert('你已登出系統');window.location.href='login.aspx'</script>");
-        }
 
-        protected void ExportCSV_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("download.aspx");
-        }
+   
 
         protected void QueryByDateBtn_Click(object sender, EventArgs e)
         {
@@ -189,9 +215,42 @@ namespace openid
             pageEnd = (AllTable.Rows.Count - 1) / pageSize+1;
             dt = GetPagedTable(AllTable, pageIndex, pageSize);
             if (dt.Rows.Count == 0)
+            {
                 ResultLabel.Text = "查無資料";
+            }
             else
+            {
                 ResultLabel.Text = string.Format("共有{0}筆資料", AllTable.Rows.Count.ToString());
+
+               DataColumn column = new DataColumn();
+               column.DataType = Type.GetType("System.String");
+               column.ColumnName = "CardNo";
+               dt.Columns.Add(column);
+
+                foreach (DataRow dr in dt.Rows)
+                {
+                    string PapersID = dr["PapersID"].ToString();
+                    if (string.IsNullOrEmpty(PapersID) == false)
+                    {
+                        string CardNumber = "";
+                        CustData CD = new CustData();
+                        BFCRMWebService crm = new BFCRMWebService();
+                        string cust = crm.GetCustDataJSON("", "", "", PapersID, "", "");
+                        if (!string.IsNullOrEmpty(cust))
+                        {
+                            CD = JsonConvert.DeserializeObject<CustData>(cust);
+                            if (CD.RC == "0")
+                                CardNumber = CD.CustList[0].CardNo;
+                            else
+                                CardNumber = CD.RM;
+                        }
+
+                        dr["CardNo"] = CardNumber;
+                    }
+                }
+            }
+               
+                
         }
 
         public DataTable GetPagedTable(DataTable dt, int PageIndex, int PageSize)

@@ -33,6 +33,7 @@ namespace openid
             string sql = @"SELECT ROW_NUMBER()   OVER (ORDER BY VerificationDataId)  AS ROWID
                                                 ,VerificationDataId
                                               ,[MobilePhone]
+                                              ,[PapersID]
 		                                      ,[VerifyCode]
                                               ,[VerifyExpiredTime]
                                               ,[TokenBindingDate]
